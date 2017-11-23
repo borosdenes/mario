@@ -19,8 +19,8 @@ from tensorforce.contrib.openai_gym import OpenAIGym
 
 # python examples/openai_gym.py Pong-ram-v0 -a examples/configs/vpg.json -n examples/configs/mlp2_network.json -e 50000 -m 2000
 # python examples/openai_gym.py CartPole-v0 -a examples/configs/vpg.json -n examples/configs/mlp2_network.json -e 2000 -m 200
-# python untitled.py Pong-v0 -a /home/deeplearning/tensorforce/examples/configs/vpg.json -n cnn_lstm_network.json -e 50000 -m 2000
-# python untitled.py Pong-v0 -a vpg.json -n cnn_lstm_network.json -e 50000 -m 2000 --monitor ./monitor --monitor-video 100 --debug
+# python mario.py Pong-v0 -a /home/deeplearning/tensorforce/examples/configs/vpg.json -n cnn_lstm_network.json -e 50000 -m 2000
+# python mario.py Pong-v0 -a vpg.json -n cnn_lstm_network.json -e 50000 -m 2000 --monitor ./monitor --monitor-video 100 --debug
 
 # ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -194,6 +194,7 @@ def main():
 			logger.info("Episode reward: {}".format(r.episode_rewards[-1]))
 			logger.info("Average of last 500 rewards: {}".format(sum(r.episode_rewards[-500:]) / min(500, len(r.episode_rewards))))
 			logger.info("Average of last 100 rewards: {}".format(sum(r.episode_rewards[-100:]) / min(100, len(r.episode_rewards))))
+
 		return True
 
 	# ---------------------------------------------------------------------------------------------------------------------------------------
