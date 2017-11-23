@@ -15,6 +15,9 @@
     "summary_spec": {
         "directory": "ckpt",
         "steps":1000,
-        "labels":["total-loss", "losses"]
+        "labels":["total-loss", "losses", "variables", "activations"]
+    },
+    "saver_spec": {
+        "directory": "model_checkpoints"
     }
 }
